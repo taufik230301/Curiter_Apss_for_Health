@@ -41,8 +41,9 @@
     </style>
   </head>
   <body>
+  <div class="container">
     <h3 class="judulartikel"> <?= $artikel['judul_artikel']?> </h3>
-    <img class="card-img-top" src="<?php echo base_url(); ?>/Assets/sayur.png" alt="">
+    <img class="card-img-top w-40" src="<?php echo base_url(); ?>/assets/artikel/<?= $artikel['gambar_artikel']?>" alt="">
     <p class="konten-artikel"><?=$artikel['konten_artikel']?></p>
     <table>
       <tr>
@@ -52,6 +53,7 @@
       <a class="a_tanya" href="<?= base_url('caridokter/')?>"><button type="button" id="button_artikel">Mau tanya dokter?</button></a>
     </tr>
     </table>
+  </div>
 
   </body>
 </html>
