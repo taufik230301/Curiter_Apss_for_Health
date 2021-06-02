@@ -154,7 +154,7 @@
         <div class="card mb-3" style="width:inherit;height: auto; margin-right: 80px;margin-left:20px;">
   <div class="row no-gutters" >
   <div class="col-md-2" >
-      <img src="<?php echo base_url(); ?>/Assets/doctor.png" class="card-img" alt="..." >
+      <img src="<?php echo base_url(); ?>/Assets/dokter.png" class="card-img" alt="..." >
     </div>
     <div class="col-md-8">
       <div class="card-body">

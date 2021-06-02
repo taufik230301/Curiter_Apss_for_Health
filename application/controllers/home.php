@@ -8,6 +8,12 @@ class Home extends CI_Controller {
         $this->load->library('session');
         $this->load->model('m_user');
     }
+
+    public function welcome(){
+        $this->load->view('welcome_header_page');
+        $this->load->view('v_main');
+        $this->load->view('footer_page');
+    }
     public function index($cek = NULL){
         $this->m_user->checklogin();
         $data['title'] = "Curiter | Home";

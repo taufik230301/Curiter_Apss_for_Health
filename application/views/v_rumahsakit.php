@@ -13,7 +13,7 @@
             <div class="card mb-3" style="width:inherit;height: auto; margin-right: 80px;margin-left:20px;">
   <div class="row no-gutters" >
   <div class="col-md-2"  >
-      <img src="<?php echo base_url(); ?>/Assets/rs.png" class="card-img" alt="..." >
+      <img src="<?php echo base_url(); ?>/Assets/rs.jpeg" class="card-img" alt="..." >
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -26,7 +26,7 @@
       </div>
   </div>
   <div class="col-md-2"style="margin-top: 120px;" >
-    <button class="ml-auto btn btn-primary text-uppercase" type="button" name="button_janji" style="border-radius:13px;font-size:13px;background-color:#ec4638;border-color:#ec4638;"> <a href="<?= base_url('rumahsakit/DetailRS/'.$rs['id_rs']) ?>"></a> Lihat Detail</button>
+    <button class="ml-auto btn btn-primary text-uppercase" type="button" name="button_janji" style="border-radius:13px;font-size:13px;background-color:#033D68;border-color:#033D68;"> <a href="<?= base_url('rumahsakit/DetailRS/'.$rs['id_rs']) ?>"></a> Lihat Detail</button>
 
   </div>
   </div>
@@ -34,3 +34,4 @@
 <?php } ?>
       </div>
 </div>
+s

@@ -42,20 +42,20 @@
 <h2 class="about" style="text-align:center">Para Pendekar Curiter</h2>
   <div class="flex-container">
     <div class="card card-about">
-        <img src="<?php echo base_url(); ?>/Assets/doctor.png" class="imgabt" alt="alvin" style="width:100%">
+        <img src="<?php echo base_url(); ?>/Assets/taufik.jpg" class="imgabt" alt="alvin" style="width:100%">
         <h2>Taufiiqulhakim</h2>
         <p class="title-card">Teknik Komputer</p>
         <p>Politeknik Negeri Sriwijaya</p>
     </div>
       <div class="card card-about">
-        <img src="<?php echo base_url(); ?>/Assets/doctor.png" class="imgabt" alt="alvin" style="width:100%">
+        <img src="<?php echo base_url(); ?>/Assets/oca.png" class="imgabt" alt="alvin" style="width:100%">
         <h2>Rosa Alawiyah</h2>
         <p class="title-card">Manajemen Informatika</p>
         <p>Politeknik Negeri Sriwijaya</p>
 
       </div>
         <div class="card card-about">
-          <img src="<?php echo base_url(); ?>/Assets/doctor.png" class="imgabt" alt="alvin" style="width:100%">
+          <img src="<?php echo base_url(); ?>/Assets/rida.png" class="imgabt" alt="alvin" style="width:100%">
           <h2>Rida Dwirahma Defitria</h2>
           <p class="title-card">Manajemen Informatika</p>
           <p>Politeknik Negeri Sriwijaya</p>

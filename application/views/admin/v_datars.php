@@ -68,7 +68,7 @@
                 <td><?php echo $r['telp_rs']; ?></td>
                 <td><?php echo $r['tentang_rs']; ?></td>
                 <td><?php echo $r['fasilitas_rs']; ?></td>
-                <td><?php echo $r['nama_poli']; ?></td>
+                <td><a type="button" class="btn btn-warning" href="<?= base_url('admin/rs/detail_rs/'.$r['id_rs'])?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
                 <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit<?= $r['id_rs'] ?>"><i class="fas fa-edit"></i></button></td>
                 <td><a href="<?= base_url(); ?>admin/rs/hapus/<?= $r['id_rs'] ?>" type="button" class="btn btn-danger" onClick="return confirm('Apakah Anda Yakin?')" ><i class="fas fa-trash"></i></a></td>
               </form>
@@ -146,6 +146,8 @@
         </table>
       </div>
     </div>
+      
+    
      <!-- Modal Tambah Mahasiswa -->
       <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog" role="document">

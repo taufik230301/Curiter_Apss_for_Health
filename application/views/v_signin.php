@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		body{
 			font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
 			overflow: hidden;
-			background-image:  url("<?php echo base_url(); ?>/Assets/Login.png");
+			background-image:  url("<?php echo base_url(); ?>/Assets/bgcuriter.png");
 			background-repeat: no-repeat;
 /*			background-color: white;*/
 			background-size: cover;

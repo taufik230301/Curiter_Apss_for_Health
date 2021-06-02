@@ -10,6 +10,10 @@ class Rs extends CI_Controller
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('admin/model_rs');
+		       $this->load->model('m_rs');
+        $this->load->model('m_user');
+        $this->load->model('m_dokter');
+        $this->load->model('m_poli');
 		$this->load->library('form_validation');
 	}
 
@@ -83,6 +87,27 @@ class Rs extends CI_Controller
 	}
 	public function hapus($id){
 		$this->model_rs->delete_rs($id);
+		redirect('admin/rs/index');
+	}
+
+	public function detail_rs($id){
+		$data['title'] = "Curiter | Detail Rumah Sakit";
+        $data['rsid'] = $this->m_rs->get_datars($id);
+        $data['drrs'] = $this->m_dokter->get_dokterbyid($id);
+		$data['poli'] = $this->m_poli->get_polibyid($id);
+		$data['polik'] = $this->model_rs->get_poli();
+        $this->load->view('header_page_admin',$data);
+        $this->load->view('admin/v_detail_rs',$data);
+        $this->load->view('footer_page');
+	}
+
+	public function tambah_poliklinik(){
+			$data = [
+			'id_rs' => $this->input->post('id', true),
+			'nama_poli' => $this->input->post('poli', true),
+			'tentang_poli' =>$this->input->post('deskripsi', true),
+		];
+		$this->model_rs->tambah_poliklinik($data);
 		redirect('admin/rs/index');
 	}
 }
