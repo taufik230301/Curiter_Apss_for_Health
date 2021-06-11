@@ -8,6 +8,7 @@ class Caridokter extends CI_Controller {
         $this->load->library('session');
         $this->load->model('m_user');
         $this->load->model('m_dokter');
+        $this->load->model('m_rs');
     }
     public function index(){
         $this->m_user->checklogin();

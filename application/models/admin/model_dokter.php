@@ -13,10 +13,19 @@ class Model_dokter extends CI_Model
 		$this->db->join('rumahsakit r', 'r.id_rs = d.id_rs');
 		return $this->db->get()->result_array();
 	}
+
+	public function get_dokterbyid($id){
+        return $this->db->get_where('dokter',array('id_rs'=>$id))->result_array();
+	}
+	
+	public function get_rsbyid($id){
+        return $this->db->get_where('rs',array('id_rs'=>$id))->result_array();
+    }
+
 	public function get_rs(){
 		$this->db->select('*');
 		$this->db->from('rumahsakit');
-		return $this->db->get()->result();
+		return $this->db->get()->result_array();
 	}
 	public function tambah_dokter($data){
 		$this->db->insert('dokter',$data);

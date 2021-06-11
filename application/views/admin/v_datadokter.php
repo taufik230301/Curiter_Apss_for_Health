@@ -39,17 +39,15 @@
           <br>
           <button type="button" class="button_tambah" data-toggle="modal" data-target="#tambah">Tambah Dokter</button>
           <br></br>
-          <table class="table table-bordered" id="table">
+          <table class="table table-bordered table-responsive" id="table">
             <thead>
               <tr>
                 <th>No</th>
-                <th>ID Dokter</th>
+                <th>Foto</th>
                 <th>Nama Dokter</th>
                 <th>Spesialis</th>
-                <th>Biografi</th>
-                <th>NO Telp</th>
+                <th>No Telp</th>
                 <th>Email</th>
-                <th>Rumah Sakit</th>
                 <th>Edit</th>
                 <th>Hapus</th>
               </tr>
@@ -61,13 +59,11 @@
               <tr>
                 <form>
                   <td><?= $no++; ?></td>
-                  <td><?php echo $d['id_dokter']; ?></td>
+                  <td><img src="<?php echo base_url(); ?>/Assets/doctor.png" class="card-img" alt="..." ></td>
                   <td><?php echo $d['nama_dokter']; ?></td>
                   <td><?php echo $d['spesialis_dokter']; ?></td>
-                  <td><?php echo $d['bio_dokter']; ?></td>
                   <td><?php echo $d['no_dokter']; ?></td>
                   <td><?php echo $d['email_dokter'] ?></td>
-                  <td><?php echo $d['nama_rs']; ?></td>
                   <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit<?= $d['id_dokter'] ?> "><i class="fas fa-edit"></i></button></td>
                   <td><a href="<?= base_url(); ?>admin/dokter/hapus/<?= $d['id_dokter'] ?>" type="button" class="btn btn-danger" onClick="return confirm('Apakah Anda Yakin?')" ><i class="fas fa-trash"></i></a></td>
                 </form>
@@ -90,7 +86,7 @@
                               <input type="hidden" name="id" value="<?= $d['id_dokter'] ?>">
                               <div class="form-group">
                                   <label for="formGroupExampleInput">No Telp</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="no" name="no"  value="<?php echo $d['no_dokter'] ?>" required>
+                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="no" name="no"  value="<?php echo $d['no_dokter'] ?>">
                               </div>
                               <div class="form-group">
                                   <label for="formGroupExampleInput">Nama Dokter</label>
@@ -101,16 +97,8 @@
                                   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Spesisalis" name="spesialis"  value="<?php echo $d['spesialis_dokter'] ?>" required>
                               </div>
                               <div class="form-group">
-                                  <label for="formGroupExampleInput">Biografi</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Biografi" name="bio"  value="<?php echo $d['bio_dokter'] ?>" required>
-                              </div>
-                              <div class="form-group">
                                 <label for="formGroupExampleInput">Email</label>
-                                <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email"  value="<?php echo $d['email_dokter'] ?>" required>
-                              </div>
-                              <div class="form-group">
-                                <label for="formGroupExampleInput">Harga</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Harga" name="harga" value="<?php echo $d['harga_dokter'] ?>" required>
+                                <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email"  value="<?php echo $d['email_dokter'] ?>">
                               </div>
                               <div class="form-group">
                                 <label for="formGroupExampleInput2">Rumah Sakit</label>
@@ -143,37 +131,26 @@
             </div>
             <div class="modal-body">
             <form method="POST" action="<?= base_url(); ?>admin/dokter/tambah">
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Rumah Sakit</label>
-                <select class="form-control" id="formGroupExampleInput" name="rs" required>
-                <?php foreach ($rs as $r ) {?>
-                  <option value="<?php echo $r->id_rs; ?>" ><?php echo $r->nama_rs;  ?></option>
-                <?php } ?>
-                </select>
-              </div>
+              <input type="hidden" name="id_rs" value="<?= $rs['id_rs'] ?>">
               <div class="form-group">
                 <label for="formGroupExampleInput">Nama Dokter</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nama Dokter" name="nama" required>
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput">Spesialis</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Spesialis" name="spesialis" required>
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput">Biografi</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Biografi" name="bio" required>
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <select multiple class="form-control" name="id_poli" id="exampleFormControlSelect2">
+                  <?php foreach ($poli as $pol ) {?>
+                    <option name value="<?php echo $pol['id_poli']; ?>"><?php echo $pol['nama_poli']; ?></option>
+                  <?php } ?>
+                </select>
               </div>
                <div class="form-group">
                 <label for="formGroupExampleInput">No Telp</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="No Telp" name="no" required >
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="No Telp" name="no">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput">Email</label>
-                <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput">Harga</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Harga" name="harga" required>
+                <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email">
               </div>
             </div>
             <div class="modal-footer">

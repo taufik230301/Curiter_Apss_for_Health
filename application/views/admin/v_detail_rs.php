@@ -231,11 +231,7 @@
             <input type="hidden" name="id" value="<?= $rsid['id_rs'] ?>">
               <div class="form-group">
                 <label for="formGroupExampleInput2">Poliklinik</label>
-                <select class="form-control" id="formGroupExampleInput" name="poli" required>
-                <?php foreach ($polik as $p ) {?>
-                  <option value="<?php echo $p->nama_poli; ?>" ><?php echo $p->nama_poli;  ?></option>
-                <?php } ?>
-                </select>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Poliklinik" name="nama_poli" required>
               </div>
                <div class="form-group">
                 <label for="formGroupExampleInput">Deskripsi Poliklinik</label>

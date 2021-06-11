@@ -27,9 +27,9 @@ class Rs extends CI_Controller
 	}
 	public function tambah(){
 		$data = [
-			'id_rs' => $this->input->post('rs', true),
 			'nama_rs' => $this->input->post('nama', true),
 			'alamat_rs' =>$this->input->post('alamat', true),
+			'website' =>$this->input->post('website', true),
 			'kota' => $this->input->post('kota',true),
 			'telp_rs' => $this->input->post('no',true),
 			'fasilitas_rs' => $this->input->post('fasilitas', true),
@@ -58,9 +58,9 @@ class Rs extends CI_Controller
 	}
 	public function edit($id){
 		$data = [
-			'id_rs' => $this->input->post('rs', true),
 			'nama_rs' => $this->input->post('nama', true),
 			'alamat_rs' =>$this->input->post('alamat', true),
+			'website' =>$this->input->post('website', true),
 			'kota' => $this->input->post('kota',true),
 			'telp_rs' => $this->input->post('no',true),
 			'fasilitas_rs' => $this->input->post('fasilitas', true),
@@ -104,10 +104,10 @@ class Rs extends CI_Controller
 	public function tambah_poliklinik(){
 			$data = [
 			'id_rs' => $this->input->post('id', true),
-			'nama_poli' => $this->input->post('poli', true),
+			'nama_poli' => $this->input->post('nama_poli', true),
 			'tentang_poli' =>$this->input->post('deskripsi', true),
 		];
 		$this->model_rs->tambah_poliklinik($data);
-		redirect('admin/rs/index');
+		redirect('admin/rs/detail_rs/'.$data['id_rs']);
 	}
 }

@@ -68,9 +68,6 @@
 }
 
 </style>
-
-
-
 <div class="container">
   <div class="sticky">
     <h3> <?= "Rumah Sakit ".$rsid['nama_rs']?>  </h3>
@@ -83,6 +80,10 @@
   <div class="Tentang">
     <h4> <?="Tentang Rumah Sakit ".$rsid['nama_rs']?></h4>
     <p><?=$rsid['tentang_rs']?></p>
+    <div style="margin-top: 12px;" >
+    <a href="<?= $rsid['website']?>" class="ml-auto btn btn-primary text-uppercase" type="button" name="button_janji" style="border-radius:13px;font-size:13px;background-color:#033D68;border-color:#033D68;">Kunjungi Website</a>
+
+  </div>
     <table style="width:100%;">
       <tr>
         <td><p class="card-text" style="text-align:left;opacity:0.7"> <img src="<?php echo base_url(); ?>/Assets/location.png" style="width:20px;height:20px;"> <?= "Kota ".$rsid['kota']?></p></td>
@@ -95,7 +96,7 @@
     for ($i=0; $i < count($split) ; $i++) {?>
     <div class="kolom-fasilitas">
             <p><?= $split[$i]; ?></p>
-        </div>
+    </div>
     <?php } ?>
     </div>
   </div>
@@ -164,7 +165,7 @@
       </div>
   </div>
   <div class="col-md-4"style="margin-top: 120px;" >
-    <button class="button-janji" data-toggle="modal" type="button" name="button_janji" data-target="#dokter<?=$dr['id_dokter']?>">Buat Janji</button>
+    <button class="button-janji" type="button" name="button_janji"><a href="<?php echo $rsid['website']?>"></a>Hubungi</button>
 
   </div>
   </div>

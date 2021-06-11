@@ -39,13 +39,13 @@
         <br>
         <button type="button" class="button_tambah" data-toggle="modal" data-target="#tambah">Tambah Rumah Sakit</button>
         <br></br>
-        <table class="table table-bordered" id="table">
+        <table class="table table-responsive table-hover" id="table">
           <thead>
             <tr>
               <th>No</th>
-              <th>ID RS</th>
               <th>Nama RS</th>
               <th>Alamat</th>
+              <th>Alamat Website</th>
               <th>Nomor</th>
               <th>Tentang</th>
               <th>Fasilitas</th>
@@ -62,9 +62,9 @@
             <tr>
               <form>
                 <td><?= $no++;  ?></td>
-                <td><?php echo $r['id_rs']; ?></td>
                 <td><?php echo $r['nama_rs']; ?></td>
                 <td><?php echo $r['alamat_rs']; ?></td>
+                <td><?php echo $r['website']; ?></td>
                 <td><?php echo $r['telp_rs']; ?></td>
                 <td><?php echo $r['tentang_rs']; ?></td>
                 <td><?php echo $r['fasilitas_rs']; ?></td>
@@ -98,11 +98,18 @@
                             <small class="form-text text-danger"><?= form_error('nama_rs') ?>.</small> -->
                         </div>
                         <div class="form-group">
-                          <label for="formGroupExampleInput">Alamatr</label>
+                          <label for="formGroupExampleInput">Alamat</label>
                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Alamat RS" name="alamat"  value="<?php echo $r['alamat_rs'] ?>" required>
                             <!-- <label for="text">Alamat</label>
                             <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $r['alamat_rs']; ?>">
                             <small class="form-text text-danger"><?= form_error('alamat_rs') ?>.</small> -->
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Alamat Website</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Website" name="website"  value="<?php echo $r['website'] ?>" required>
+                            <!-- <label for="text">Alamat</label>
+                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $r['website']; ?>">
+                            <small class="form-text text-danger"><?= form_error('website') ?>.</small> -->
                         </div>
                         <div class="form-group">
                           <label for="formGroupExampleInput">Kota</label>
@@ -148,7 +155,7 @@
     </div>
       
     
-     <!-- Modal Tambah Mahasiswa -->
+     <!-- Modal Tambah Data Rumah Sakit -->
       <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -159,20 +166,20 @@
             <!-- isi form ini -->
             <form method="POST" action="<?= base_url(); ?>admin/rs/tambah">
               <div class="form-group">
-                <label for="formGroupExampleInput2">Poliklinik</label>
-                <select class="form-control" id="formGroupExampleInput" name="rs" required>
-                <?php foreach ($poli as $p ) {?>
-                  <option value="<?php echo $p->id_poli; ?>" ><?php echo $p->nama_poli;  ?></option>
-                <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
                 <label for="formGroupExampleInput">Nama Rumah Sakit</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nama Rumah Sakit" name="nama" required>
               </div>
               <div class="form-group">
+                <label for="formGroupExampleInput">Poliklinik</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Poliklinik" name="nama_poli" required>
+              </div>
+              <div class="form-group">
                 <label for="formGroupExampleInput">Alamat</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Alamat" name="alamat" required>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Alamat Website</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Alamat Website" name="website" required>
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput">Kota</label>

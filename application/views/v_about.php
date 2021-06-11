@@ -55,8 +55,8 @@
 
       </div>
         <div class="card card-about">
-          <img src="<?php echo base_url(); ?>/Assets/rida.png" class="imgabt" alt="alvin" style="width:100%">
-          <h2>Rida Dwirahma Defitria</h2>
+          <img src="<?php echo base_url(); ?>/Assets/def.png" class="imgabt" alt="alvin" style="width:100%">
+          <h2>Rida Dwirahma D</h2>
           <p class="title-card">Manajemen Informatika</p>
           <p>Politeknik Negeri Sriwijaya</p>
 

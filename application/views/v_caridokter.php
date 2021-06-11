@@ -148,7 +148,7 @@
   </form>
   </div>
 </div>
-
+  <!-- <?php var_dump($d); ?> -->
       <?php foreach ($d as $d) {?>
       <div class="konten-dokter" style="overflow:auto; height:auto;">
         <div class="card mb-3" style="width:inherit;height: auto; margin-right: 80px;margin-left:20px;">
@@ -160,18 +160,13 @@
       <div class="card-body">
         <h5 class="card-title" style="text-align:left;"><?php echo $d['nama_dokter']; ?> | <?php echo $d['spesialis_dokter'] ?></h5>
         <!-- <h6 class="card-title">Jenis Spesialis</h6> -->
-        <p class="card-text" style="text-align:left;"><?php echo "Profil : ".$d['bio_dokter'] ?></p>
         <p class="card-text" style="text-align:left;"><?php echo "Rumah Sakit : ".$d['nama_rs']?></p>
         <!-- <a href="#" class="btn btn btn-primary btn-sm active" role="button" aria-pressed="true">Primary link</a> -->
       </div>
   </div>
-  <div class="col-md-1"style="margin-top: 120px;" >
-    <button class="ml-auto btn btn-secondary " type="button" onclick='btndisable()' name="button_chat" data-toggle="modal" data-target="#bayar<?=$d['id_dokter']?>" style="border-radius:13px;font-size:13px;background-color:#033D68;border-color:#033D68;">Chat</button>
+  <div class="col-md-2"style="margin-top: 120px;" >
+    <button class="ml-auto btn btn-primary text-uppercase" type="button" name="button_call" style="border-radius:13px;font-size:13px;background-color:#033D68;border-color:#033D68;"> <a href="<?= $d['website'] ?>" target="_blank"></a> Hubungi</button>
   </div>
-  <div class="col-md-1"style="margin-top: 120px;" >
-    <button class="ml-auto btn btn-primary " type="button" name="button-janji-popup"data-toggle="modal" data-target="#bayar-janji<?=$d['id_dokter']?>" style="border-radius:13px;font-size:13px;background-color:#033D68;border-color:#033D68;">Buat Janji</button>
-  </div>
-
 </div>
       </div>
 </div>
