@@ -10,8 +10,10 @@ class Home extends CI_Controller {
     }
 
     public function welcome(){
-        $this->load->view('welcome_header_page');
-        $this->load->view('v_main');
+       $data['title'] = "Curiter | Home";
+       $data['artikel'] = $this->db->get('artikel')->result_array();
+        $this->load->view('welcome_header_page',$data);
+        $this->load->view('v_main_welcome',$data);
         $this->load->view('footer_page');
     }
     public function index($cek = NULL){
@@ -63,6 +65,18 @@ class Home extends CI_Controller {
     $data['artikel'] = $artikel;
     $this->load->view('header_page',$data);
     $this->load->view('v_article',$data);
+    $this->load->view('footer_page');
+
+  }
+
+  
+  public function artikel_user($id)
+  {
+    $artikel = $this->db->get_where('artikel',array("id_artikel"=>$id))->row_array();
+    $data['title'] = "Curiter | ".$artikel['judul_artikel'];
+    $data['artikel'] = $artikel;
+    $this->load->view('welcome_header_page',$data);
+    $this->load->view('v_article_user',$data);
     $this->load->view('footer_page');
 
   }

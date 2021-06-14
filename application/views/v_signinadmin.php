@@ -45,16 +45,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}*/
 		.texth1{
 			font-size: 45px;
-			color: #ec4638;
+			color: #477A98;
 			font-weight: 500;
 		}
 		.textp{
 			font-size: 16px;
-			color: #ec4638;
+			color: #477A98;
 			font-weight: 300;
 		}
 		.texta{
-			color: #ec4638;
+			color: #477A98;
 			font-weight: 700;
 		}
 		.texta{
@@ -62,11 +62,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			font-weight: 700;
 		}
 		.texta:hover{
-			color: #ec4638;
+			color: #477A98;
 		}
 		.formlogin{
 			background: transparent;
-			color: #ec4638;
+			color: #477A98;
 			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
@@ -87,19 +87,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			padding: 10px;
 			background-color: transparent;
 			border: none;
-			border: 2px solid #ec4638;
-			color: #ec4638;
+			border: 2px solid #477A98;
+			color: #477A98;
 			border-radius: 20px;
 			font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
 			font-size: 16px;
 		}
 		button:hover{
-			background: #ec4638;
+			background: #477A98;
 			color: #fff;
 			cursor: pointer;
 		}
 		.email, .password{
-			border-bottom: 1px solid #ec4638;
+			border-bottom: 1px solid #477A98;
 		}
 	</style>
 </head>

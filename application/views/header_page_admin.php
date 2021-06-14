@@ -270,7 +270,6 @@ article{
 			<div class="float-right">
 				<input type="text" placeholder="Cari disini" class="search" name="keyword">
 				<button class="btn btn-success btn-lg" type="submit" id="button"><i class="fas fa-search"></i></button>
-
 				<div class="dropdown">
 					<button class="dropbtn" onclick="myFunction()"> <i class="fas fa-sign-out-alt "></i></button>
 					<div id="myDropdown" class="dropdown-content isidrop">

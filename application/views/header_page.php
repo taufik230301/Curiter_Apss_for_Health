@@ -457,7 +457,7 @@ width: 18rem;
 			<nav>
 			<a href="<?= base_url('home/')?>" class="aidok">Curiter</a>
 			<a href="<?= base_url('home/')?>">Home</a>
-			<a href="<?= base_url('caridokter/')?>">Cari Dokter</a>
+			<a href="<?= base_url('caridokterrs/')?>">Cari Dokter</a>
 			<a href="<?= base_url('rumahsakit/')?>">Rumah Sakit</a>
 			<a href="<?= base_url('about/')?>">Tentang Curiter</a>
         <div class="topnav-right">

@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		
 		$this->load->view('header_page');
 		$this->load->view('v_main');
 		$this->load->view('footer_page');

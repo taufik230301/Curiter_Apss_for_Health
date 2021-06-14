@@ -15,6 +15,14 @@ class M_dokter extends CI_Model
     public function get_dokterbyid($id){
         return $this->db->get_where('dokter',array('id_rs'=>$id))->result_array();
     }
+    public function get_dokterbyidpoli($id)
+    {
+        $this->db->select('*');
+        
+        $this->db->join('poliklinik', 'poliklinik.id_poli = dokter.id_poli');
+       
+        return $this->db->get_where('dokter', array('dokter.id_poli' => $id))->result_array();
+    }
     public function searchdokter($keyword){
         $this->db->select('*');
         $this->db->from('dokter');

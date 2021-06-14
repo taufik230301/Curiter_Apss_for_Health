@@ -1,13 +1,4 @@
 <div class="container" style="margin-top: 90px">
-<div class="row">
-  <div class="col-md-6">
-  <form action=" <?= base_url('rumahsakit/')?> " method="post">
-  <input class="cari-dokter" type="text" name="search" placeholder="Cari Rumah Sakit ..." autocomplete="off">
-  </form>
-  </div>
-</div>
-
-
       <div class="konten-dokter" style="overflow:auto; height:auto;">
             <?php foreach ($rs as $rs) {?>
             <div class="card mb-3" style="width:inherit;height: auto; margin-right: 80px;margin-left:20px;">

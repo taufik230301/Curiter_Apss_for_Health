@@ -25,7 +25,7 @@ class Artikel extends CI_Controller
 		$konten_artikel = $this->input->post('konten_artikel', true);
 		$sumber_artikel = $this->input->post('sumber_artikel', true);
 		 
-		$config['upload_path'] = './assets/artikel';
+	  $config['upload_path'] = './assets/artikel';
       $config['allowed_types'] = 'jpg|png|jpeg|gif';
       $config['max_size'] = '2048';  //2MB max
       $config['max_width'] = '4480'; // pixel
